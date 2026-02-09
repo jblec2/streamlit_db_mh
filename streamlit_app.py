@@ -6,7 +6,7 @@ import pandas as pd
 @st.cache_resource
 def get_engine():
     return create_engine(
-        "postgresql+psycopg2://jblec2:F3zhZcaV75@postgres-9.svc.valeria.science:5432/ul_val_prj_mh_hydro_pr"
+        "postgresql+psycopg2://jblec2:F3zhZcaV75@10.250.131.24:5432/ul_val_prj_mh_hydro_pr"
     )
 
 engine = get_engine()
