@@ -1,6 +1,6 @@
 import socket
 import streamlit as st
-st.write(st.secrets["connections"]["postgresql"])
+st.write(st.secrets["connections"]["postgresql"]["host"])
 try:
     ip = socket.gethostbyname(st.secrets["connections"]["postgresql"]["host"])
     st.write("Resolved IP:", ip)
