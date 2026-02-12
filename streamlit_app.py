@@ -1,5 +1,11 @@
+import socket
 import streamlit as st
 
+try:
+    ip = socket.gethostbyname(st.secrets["connections"]["postgresql"]["host"])
+    st.write("Resolved IP:", ip)
+except Exception as e:
+    st.error(f"DNS resolution failed: {e}")
 # Initialize connection.
 conn = st.connection("postgresql", type="sql")
 
